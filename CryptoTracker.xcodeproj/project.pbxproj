@@ -11,6 +11,7 @@
 		C7176F1827F5BE1600F8DF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7176F1727F5BE1600F8DF54 /* ContentView.swift */; };
 		C7176F1D27F5BE1900F8DF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7176F1C27F5BE1900F8DF54 /* Preview Assets.xcassets */; };
 		C7176F2427F5BFD400F8DF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7176F2327F5BFD400F8DF54 /* Assets.xcassets */; };
+		C7176F2727F5C0A500F8DF54 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7176F2627F5C0A500F8DF54 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		C7176F1727F5BE1600F8DF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7176F1C27F5BE1900F8DF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7176F2327F5BFD400F8DF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Resources/Assets.xcassets; sourceTree = "<group>"; };
+		C7176F2627F5C0A500F8DF54 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		C7176F1427F5BE1600F8DF54 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C7176F2527F5C09700F8DF54 /* Extentions */,
 				C7176F1527F5BE1600F8DF54 /* CryptoTrackerApp.swift */,
 				C7176F1727F5BE1600F8DF54 /* ContentView.swift */,
 				C7176F2327F5BFD400F8DF54 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				C7176F1C27F5BE1900F8DF54 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7176F2527F5C09700F8DF54 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				C7176F2627F5C0A500F8DF54 /* Color.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				C7176F1827F5BE1600F8DF54 /* ContentView.swift in Sources */,
 				C7176F1627F5BE1600F8DF54 /* CryptoTrackerApp.swift in Sources */,
+				C7176F2727F5C0A500F8DF54 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
