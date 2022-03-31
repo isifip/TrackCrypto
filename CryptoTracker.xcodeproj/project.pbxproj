@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		C7176F1627F5BE1600F8DF54 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7176F1527F5BE1600F8DF54 /* CryptoTrackerApp.swift */; };
 		C7176F1827F5BE1600F8DF54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7176F1727F5BE1600F8DF54 /* ContentView.swift */; };
-		C7176F1A27F5BE1900F8DF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7176F1927F5BE1900F8DF54 /* Assets.xcassets */; };
 		C7176F1D27F5BE1900F8DF54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7176F1C27F5BE1900F8DF54 /* Preview Assets.xcassets */; };
+		C7176F2427F5BFD400F8DF54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7176F2327F5BFD400F8DF54 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C7176F1227F5BE1600F8DF54 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7176F1527F5BE1600F8DF54 /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		C7176F1727F5BE1600F8DF54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C7176F1927F5BE1900F8DF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7176F1C27F5BE1900F8DF54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7176F2327F5BFD400F8DF54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Resources/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			children = (
 				C7176F1527F5BE1600F8DF54 /* CryptoTrackerApp.swift */,
 				C7176F1727F5BE1600F8DF54 /* ContentView.swift */,
-				C7176F1927F5BE1900F8DF54 /* Assets.xcassets */,
+				C7176F2327F5BFD400F8DF54 /* Assets.xcassets */,
 				C7176F1B27F5BE1900F8DF54 /* Preview Content */,
 			);
 			path = CryptoTracker;
@@ -126,7 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7176F1D27F5BE1900F8DF54 /* Preview Assets.xcassets in Resources */,
-				C7176F1A27F5BE1900F8DF54 /* Assets.xcassets in Resources */,
+				C7176F2427F5BFD400F8DF54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,7 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
