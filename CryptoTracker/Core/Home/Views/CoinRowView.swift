@@ -77,6 +77,6 @@ extension CoinRowView {
                 )
         }
         .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing)
-        .padding(.trailing, 6)
+        //.padding(.trailing, 6)
     }
 }
