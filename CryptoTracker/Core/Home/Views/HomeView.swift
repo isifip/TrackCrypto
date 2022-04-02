@@ -1,9 +1,3 @@
-//
-//  HomeView.swift
-//  CryptoTracker
-//
-//  Created by Irakli Sokhaneishvili on 31.03.22.
-//
 
 import SwiftUI
 
@@ -21,6 +15,7 @@ struct HomeView: View {
             // Content Layer
             VStack {
                 homeHeader
+                HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 columnTitles
                 if !showPortfolio {

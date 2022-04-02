@@ -1,9 +1,3 @@
-//
-//  NetworkingManager.swift
-//  CryptoTracker
-//
-//  Created by Irakli Sokhaneishvili on 01.04.22.
-//
 
 import Foundation
 import Combine

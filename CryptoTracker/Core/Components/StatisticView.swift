@@ -1,9 +1,4 @@
-//
-//  StatisticView.swift
-//  CryptoTracker
-//
-//  Created by Irakli Sokhaneishvili on 02.04.22.
-//
+
 
 import SwiftUI
 
