@@ -25,6 +25,7 @@ class DeveloperPreview {
     
     let stat1 = StatisticModel(title: "Market Cap", value: "$12.58Bn", percentageChange: 25.34)
     let stat2 = StatisticModel(title: "Total Volume", value: "$1.23Tr")
+    let stat3 = StatisticModel(title: "Portfolio value", value: "$50.4k", percentageChange: -17.45)
     
     let coin = CoinModel(
        id: "bitcoin",
