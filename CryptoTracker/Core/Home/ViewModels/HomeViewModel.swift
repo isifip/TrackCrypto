@@ -29,22 +29,9 @@ class HomeViewModel: ObservableObject {
                 self?.allCoins = returnedCoins
             }
             .store(in: &cancellables)
+        // Updates MarketData
         marketDataService.$marketData
-            .map { marketDataModel -> [StatisticModel] in
-                var stats: [StatisticModel] = []
-                guard let data = marketDataModel else {
-                    return stats
-                }
-                
-                let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
-                let volume = StatisticModel(title: "25h Volume", value: data.volume)
-                let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
-                let portfolio = StatisticModel(title: "Portfolio Value", value: "", percentageChange: 0)
-                
-                stats.append(contentsOf: [marketCap, volume, btcDominance, portfolio])
-                
-                return stats
-            }
+            .map(mapGlobalMarketData)
             .sink { [weak self] returnedStats in
                 self?.statistics = returnedStats
             }
@@ -62,5 +49,21 @@ class HomeViewModel: ObservableObject {
             coin.symbol.lowercased().contains(lowercasedText) ||
             coin.id.lowercased().contains(lowercasedText)
         }
+    }
+    
+    private func mapGlobalMarketData(marketDataModel: MarketDataModel?) -> [StatisticModel] {
+        var stats: [StatisticModel] = []
+        guard let data = marketDataModel else {
+            return stats
+        }
+        
+        let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, percentageChange: data.marketCapChangePercentage24HUsd)
+        let volume = StatisticModel(title: "25h Volume", value: data.volume)
+        let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominance)
+        let portfolio = StatisticModel(title: "Portfolio Value", value: "", percentageChange: 0)
+        
+        stats.append(contentsOf: [marketCap, volume, btcDominance, portfolio])
+        
+        return stats
     }
 }
