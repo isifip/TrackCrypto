@@ -16,9 +16,26 @@ class PortfolioDataService {
             if let error = error {
                 print("Error loading Core Data: \(error)")
             }
+            self.getPortfolio()
         }
     }
     
+    //MARK: --> Public Section
+    func updatePortfolio(coin: CoinModel, amount: Double) {
+        // Check if coin is already in portfolio entity
+        if let entity = savedEntities.first(where: { $0.coinID == coin.id }) {
+            if amount > 0 {
+                update(entity: entity, amount: amount)
+            } else {
+                delete(entity: entity)
+            }
+        } else {
+            add(coin: coin, amount: amount)
+        }
+    }
+    
+    
+    //MARK: --> Private Section
     private func getPortfolio() {
         let request = NSFetchRequest<PortfolioEntity>(entityName: entityName)
         
