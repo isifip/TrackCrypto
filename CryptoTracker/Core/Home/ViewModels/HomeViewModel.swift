@@ -72,11 +72,10 @@ class HomeViewModel: ObservableObject {
     
     private func filterAndSortCoins(text: String, coins: [CoinModel], sort: sortOption) -> [CoinModel] {
         // Filter
-        var filteredCoins = filterCoins(text: text, coins: coins)
+        var updatedCoins = filterCoins(text: text, coins: coins)
         // Sort
-        let sortedCoins = sortCoins(sort: sort, coins: filteredCoins)
-        
-        return sortedCoins
+        sortCoins(sort: sort, coins: &updatedCoins)
+        return updatedCoins
     }
     
     private func filterCoins(text: String, coins: [CoinModel]) -> [CoinModel] {
@@ -92,16 +91,16 @@ class HomeViewModel: ObservableObject {
         }
     }
     
-    private func sortCoins(sort: sortOption, coins: [CoinModel]) -> [CoinModel] {
+    private func sortCoins(sort: sortOption, coins: inout [CoinModel]) {
         switch sort {
         case .rank, .holdings:
-            return coins.sorted(by: { $0.rank < $1.rank })
+            coins.sort(by: { $0.rank < $1.rank })
         case .rankReversed, .holdingsReversed:
-            return coins.sorted(by: { $0.rank > $1.rank })
+            coins.sort(by: { $0.rank > $1.rank })
         case .price:
-            return coins.sorted(by: { $0.currentPrice > $1.currentPrice })
+            coins.sort(by: { $0.currentPrice > $1.currentPrice })
         case .priceReversed:
-            return coins.sorted(by: { $0.currentPrice < $1.currentPrice })
+            coins.sort(by: { $0.currentPrice < $1.currentPrice })
         }
     }
     
