@@ -19,7 +19,7 @@ struct SettingsView: View {
                 goinGeckoSection
                 developerSection
             }
-            .listStyle(.grouped)
+            .listStyle(.insetGrouped)
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -74,12 +74,12 @@ extension SettingsView {
     private var developerSection: some View {
         Section("Developer") {
             HStack(spacing: 10) {
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 50)
-                    .clipShape(Circle())
-                Text("I'm beginner iOS developer.")
+//                //Image("logo")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(height: 50)
+//                    .clipShape(Circle())
+                Text("I'm beginner iOS developer. This app was developed by Irakli. It uses SwiftUI and is written 100% in Swift. The projet benefits from multi-threading, publishers/subscriber and data persistance.")
                     .font(.callout)
                     .fontWeight(.medium)
                     .foregroundColor(Color.theme.accent)
