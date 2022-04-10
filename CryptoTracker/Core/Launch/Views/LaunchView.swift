@@ -12,6 +12,12 @@ struct LaunchView: View {
     @State private var loadingText: [String] = "Loading your portfolio...".map { String($0) }
     @State private var showLoadingText = false
     
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State private var counter: Int = 0
+    @State private var loops: Int = 0
+    
+    @Binding var showLaunchView: Bool
+    
     var body: some View {
         ZStack {
             Color.launch.background
@@ -27,6 +33,7 @@ struct LaunchView: View {
                                 .font(.headline)
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color.launch.accent)
+                                .offset(y: counter == index ? -7 : 0)
                         }
                     }
                     .transition(AnyTransition.scale.animation(.easeIn))
@@ -36,12 +43,26 @@ struct LaunchView: View {
             .onAppear {
                 showLoadingText.toggle()
             }
+            .onReceive(timer) { _ in
+                withAnimation(.spring()) {
+                    let lastIndex = loadingText.count - 1
+                    if counter == lastIndex {
+                        counter = 0
+                        loops += 1
+                        if loops >= 2 {
+                            showLaunchView = false
+                        }
+                    } else {
+                        counter += 1
+                    }
+                }
+            }
         }
     }
 }
 
 struct LaunchView_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchView()
+        LaunchView(showLaunchView: .constant(true))
     }
 }
